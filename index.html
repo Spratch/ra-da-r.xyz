@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html lang="fr" >
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+ <meta name="robots" content="index,follow">
+ <title>Radar</title>
+ <meta name="description" content="Radar, Design Graphique">
+ <meta name="theme-color" content="#F6F6F6" />
+ <link rel="icon" type="image/x-icon" href="favicon.ico" />
+ <meta name="Keywords" content="joseph clenet alex pagnoux graphic designer graphiste design rennes bretagne direction artistique motion design editorial identite visuelle web webdesign">
+ <meta name="Author" content="Radar">
+ <meta name="Copyright" content="Radar">
+ <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+ <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+ <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+ <script type="text/javascript" src="script.js"></script>
+ <script type="module">
+
+  const largeSlider = ()=>{
+  	let largeSliders = document.querySelectorAll('.large-swiper')
+  	let prevArrow = document.querySelectorAll('.swiper-button-prev')
+  	let nextArrow = document.querySelectorAll('.swiper-button-next')
+    let pagination = document.querySelectorAll('.swiper-pagination')
+  	largeSliders.forEach((slider, index)=>{
+      // this bit checks if there's more than 1 slide, if there's only 1 it won't loop
+  		let sliderLength = slider.children[0].children.length
+  		let result = (sliderLength > 1) ? true : false
+  		const swiper = new Swiper(slider, {
+  			direction: 'horizontal',
+  			loop: result,
+        grabCursor: true,
+  			navigation: {
+          // the 'index' bit below is just the order of the class in the queryselectorAll array, so the first one would be NextArrow[0] etc
+  				nextEl: nextArrow[index],
+  				prevEl: prevArrow[index],
+  			},
+        pagination: {
+           el: pagination[index],
+           type: "fraction",
+        },
+  		});
+  	})
+  }
+  window.addEventListener('load', largeSlider)
+</script>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="header" class="action">
+    <div id="nom">
+      <hr>
+      <p><a href="#projets">Radar</a></p>
+      <div class="reaction">
+        <hr>
+        <p>Atelier</p><hr>
+        <p>&emsp;&emsp;&ensp;Direction</p><hr>
+        <p>&emsp;&emsp;&ensp;Artistique</p><hr>
+        <p>&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;Rennes</p></div>
+    </div>
+    <div id="description">
+      <hr>
+      <p>À propos</p>
+      <p class="reaction">Nous concevons et produisons des solutions graphiques à vos besoins de communication.</p>
+    </div>
+    <div id="services">
+      <hr>
+      <p>Services</p>
+      <p class="reaction">
+      <span class="brand filter active" data-filter="brand">Identité&nbsp;visuelle</span>
+      <span class="motion filter" data-filter="motion">Motion&nbsp;design</span><br>
+      <span class="editorial filter" data-filter="editorial">Design&nbsp;éditorial</span>
+      <span class="web filter" data-filter="all">Design&nbsp;d'interfaces</span>
+      </p>
+    </div>
+    <div id="index">
+      <hr>
+      <p>Index</p>
+      <div class="reaction index">
+        <hr>
+        <!--<p class="web" onclick="location.href='#ag-org'" style="cursor:pointer"><a href="#ag-org">anothergraphic.org</a></p><hr>-->
+        <p class="editorial" onclick="location.href='#gand-life'" style="cursor:pointer"><a href="#gand-life">Gand Life</a></p><hr>
+        <p class="brand" onclick="location.href='#ora'" style="cursor:pointer"><a href="#ora">Ora</a></p><hr>
+        <p class="motion" onclick="location.href='#take-care'" style="cursor:pointer"><a href="#take-care">Take Care of our Home</a></p><hr>
+        <p class="editorial" onclick="location.href='#panser-plainte'" style="cursor:pointer"><a href="#panser-plainte">Panser la plainte</a></p><hr>
+        <p class="editorial" onclick="location.href='#128-notifs'" style="cursor:pointer"><a href="#128-notifs">128 notifications plus tard</a></p><hr>
+        <p class="type" onclick="location.href='#typos'" style="cursor:pointer"><a href="#typos">Typographies</a></p><hr>
+        <p class="editorial" onclick="location.href='#panser-plainte'" style="cursor:pointer"><a href="#panser-plainte">Panser la plainte</a></p><hr>
+        <p class="motion" onclick="location.href='#bsce'" style="cursor:pointer"><a href="#bsce">Kevin Durant on BSCE</a></p>
+      </div>
+    </div>
+    <div id="contact">
+      <hr>
+      <p>Contact</p>
+      <div class="reaction contact">
+        <hr>
+        <a href="https://www.instagram.com/radar.xyz/"><p>Instagram</p><p>radar.xyz</p></a><hr>
+        <a href="mailto:hello@ra-da-r.xyz"><p>Mail</p><p>hello@ra-da-r.xyz</p></a><hr>
+        <a href="tel:+33789940718"><p>Joseph Clenet</p><p>07 89 94 07 18</p></a><hr>
+        <a href="tel:+33633836302"><p>Alex Pagnoux</p><p>06 33 83 63 02</p></a>
+      </div>
+    </div>
+  </div>
+<!--  <div id="intro">
+      <div class="video">
+        <video controls width="auto" autoplay mute>
+          <source src="/visuels/nous.webm"
+                  type="video/webm">
+        </video>
+      </div>
+  </div>-->
+  <div id="projets">
+    <div id="padding-top"></div>
+    <!--<div id="ag-org" class="projet large-slider-container">
+      <div class="carousel swiper large-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="/visuels/ag-org/ag-org_1.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/ag-org/ag-org_2.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/ag-org/ag-org_3.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/ag-org/ag-org_4.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/ag-org/ag-org_5.png" alt=""></div>
+        </div>
+      </div>
+      <div class="description-projet">
+        <div class="sticky">
+          <div class="nom-projet">
+            <p>anothergraphic.org</p>
+            <br>
+            <hr>
+          </div>
+          <div class="data-projet">
+            <p>Service</p>
+            <div>
+              <p class="web">Design d'interfaces</p>
+            </div>
+            <p>Date</p>
+            <p>2019</p>
+            <p>Commanditaire</p>
+            <p>Studio Studio</p>
+            <p>Site</p>
+            <p><a href="http://anothergraphic.org">anothergraphic.org</a></p>
+            <br>
+          </div>
+          <div class="infos-projet">
+            <hr>
+            <p>Infos</p>
+            <p>Another Graphic est un site internet que nous avons fait pour Studio Studio. Après un travail d’UX et UI design, nous avons développé le site à partir d’un CMS et principalement en HTML, CSS et JavaScript. Le site présente des créations graphiques sous forme soit de liste soit de grille ; chaque objet référencé possède sa page détaillée.</p>
+          </div>
+        </div>
+        <div class="swiper-infos">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-navigation">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>-->
+
+    <div id="gand-life" class="projet large-slider-container editorial">
+      <div class="carousel swiper large-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="/visuels/gand-life/gl_1.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/gand-life/gl_2.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/gand-life/gl_3.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/gand-life/gl_4.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/gand-life/gl_5.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/gand-life/gl_6.png" alt=""></div>
+        </div>
+      </div>
+      <div class="description-projet">
+        <div class="sticky">
+          <div class="nom-projet">
+            <p>Gand Life</p>
+            <br>
+            <hr>
+          </div>
+          <div class="data-projet">
+            <p>Service</p>
+            <div>
+              <p class="editorial">Design éditorial</p>
+            </div>
+            <p>Date</p>
+            <p>2019</p>
+            <p>Commanditaire</p>
+            <p>DSAA Rennes</p>
+            <p>Format</p>
+            <p>195x275mm</p>
+            <br>
+          </div>
+          <div class="infos-projet">
+            <hr>
+            <p>Infos</p>
+            <p>Suite à notre collaboration avec Studio Studio, nous avons souhaité produire un ouvrage relatant notre expérience. Nous traitons en texte de deux aspects de ce stage : l’attitude des marques sur les réseaux sociaux, et les manières de faire de la curation graphique aujourd’hui.<br>Puis nous revenons en annexe sur la charte graphique d’Another Graphic, des archives photographiques, ainsi qu’un recueil de conversations portant sur la&nbsp;curation&nbsp;graphique.</p>
+          </div>
+        </div>
+        <div class="swiper-infos">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-navigation">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="ora" class="projet large-slider-container brand">
+      <div class="carousel swiper large-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="/visuels/Ora/ORA_1.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/Ora/ORA_2.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/Ora/ORA_3.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/Ora/ORA_4.png" alt=""></div>
+        </div>
+      </div>
+      <div class="description-projet">
+        <div class="sticky">
+          <div class="nom-projet">
+            <p>Ora</p>
+            <br>
+            <hr>
+          </div>
+          <div class="data-projet">
+            <p>Service</p>
+            <div>
+              <p class="brand">Identité visuelle</p>
+            </div>
+            <p>Date</p>
+            <p>2022</p>
+            <p>Commanditaire</p>
+            <p>Ora</p>
+            <br>
+          </div>
+          <div class="infos-projet">
+            <hr>
+            <p>Infos</p>
+            <p>Identité visuelle et site internet pour le collectif ORA. Ce collectif travaille autour du paysage et de l'ambiance à travers plusieurs mediums : field recording, composition musicale, remix, mix, djing, animation vidéo, motion design, peinture, creative coding, vjing…</p>
+          </div>
+        </div>
+        <div class="swiper-infos">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-navigation">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="take-care" class="projet motion">
+      <div class="carousel">
+        <!--<video src="/visuels/motions/MIXAGE_1.webm" controls>
+
+        </video>-->
+        <iframe src="https://player.vimeo.com/video/688469131" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="description-projet">
+        <div class="sticky">
+          <div class="nom-projet">
+            <p>Take Care of our Home</p>
+            <br>
+            <hr>
+          </div>
+          <div class="data-projet">
+            <p>Service</p>
+            <div>
+              <p class="motion">Motion Design</p>
+            </div>
+            <p>Date</p>
+            <p>2021</p>
+            <p>Durée</p>
+            <p>10s</p>
+            <br>
+          </div>
+          <div class="infos-projet">
+            <hr>
+            <p>Infos</p>
+            <p>C’est à l’occasion de la journée mondiale de l’environnement 2021 que cette courte vidéo a été diffusé sur les réseaux sociaux, illustrant un appel aux dons à des ONG de sauvegarde de l’environnement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="128-notifs" class="projet large-slider-container editorial">
+      <div class="carousel swiper large-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="/visuels/128notifs/128_1.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/128notifs/128_2.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/128notifs/128_3.png" alt=""></div>
+        </div>
+      </div>
+      <div class="description-projet">
+        <div class="sticky">
+          <div class="nom-projet">
+            <p>128 notifications plus tard</p>
+            <br>
+            <hr>
+          </div>
+          <div class="data-projet">
+            <p>Service</p>
+            <div>
+              <p class="editorial">Design éditorial</p>
+            </div>
+            <p>Date</p>
+            <p>2020</p>
+            <p>Commanditaire</p>
+            <p>DSAA Rennes</p>
+            <p>Format</p>
+            <p>140x210mm</p>
+            <br>
+          </div>
+          <div class="infos-projet">
+            <hr>
+            <p>Infos</p>
+            <p>Mémoire de recherche professionnel portant sur l’incidence des interfaces numérique sur le bien-être au travail dans le secteur tertiaire. L’ouvrage fait état d’une recherche sur les manières par lesquelles le design graphique peut diminuer les distractions numériques dans l’espace de travail et comment créer des interfaces utiles sans perturber l’usager.<br>Le format de la publication ainsi que la mise en page du texte font écho aux dimensions verticales des smartphones. Des pictogrammes dessinés sur mesure et inspirés des emojis viennent illustrer et segmenter la réflexion chapitre&nbsp;par&nbsp;chapitre.</p>
+          </div>
+        </div>
+        <div class="swiper-infos">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-navigation">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="typos" class="projet large-slider-container type">
+      <div class="carousel swiper large-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="/visuels/typos/typos_1.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/typos/typos_2.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/typos/typos_3.png" alt=""></div>
+        </div>
+      </div>
+      <div class="description-projet">
+        <div class="sticky">
+          <div class="nom-projet">
+            <p>Typographies</p>
+            <br>
+            <hr>
+          </div>
+          <div class="data-projet">
+            <p>Service</p>
+            <div>
+              <p class="type">Design typographique</p>
+            </div>
+            <p>Date</p>
+            <p>2018 → …</p>
+            <p>Commanditaire</p>
+            <p>Divers</p>
+            <br>
+          </div>
+          <div class="infos-projet">
+            <hr>
+            <p>Infos</p>
+            <p>Passionnés par la typographie, nous avons plusieurs fois designé des fontes sur mesure ou des lettrages pour des projets de design éditorial, d’identité visuelle ou artistiques.</p>
+          </div>
+        </div>
+        <div class="swiper-infos">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-navigation">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="panser-plainte" class="projet large-slider-container editorial">
+      <div class="carousel swiper large-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="/visuels/plainte/pl_1.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/plainte/pl_2.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/plainte/pl_3.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/plainte/pl_4.png" alt=""></div>
+          <div class="swiper-slide"><img src="/visuels/plainte/pl_5.png" alt=""></div>
+        </div>
+      </div>
+      <div class="description-projet">
+        <div class="sticky">
+          <div class="nom-projet">
+            <p>Panser la plainte</p>
+            <br>
+            <hr>
+          </div>
+          <div class="data-projet">
+            <p>Service</p>
+            <div>
+              <p class="editorial">Design éditorial</p>
+            </div>
+            <p>Date</p>
+            <p>2020</p>
+            <p>Commanditaire</p>
+            <p>DSAA Rennes</p>
+            <p>Format</p>
+            <p>140x180mm</p>
+            <br>
+          </div>
+          <div class="infos-projet">
+            <hr>
+            <p>Infos</p>
+            <p>Mémoire de recherche professionnel portant sur le rôle que peut avoir le design lors d’un dépôt de plainte pour violence sexuelle.<br>Il fait état de la situation actuelle concernant l’accueil des victimes et questionne l’intervention potentielle du design en amont de la plainte, et au moment même de la plainte.<br>Les choix graphiques de l’ouvrage facilitent la lecture d’une réflexion sourcée en mettant en valeur annotations et notes de bas de page et en illustrant des chiffres clés. La mise en page emprunte certains codes visuels de&nbsp;l’administration&nbsp;policière.</p>
+          </div>
+        </div>
+        <div class="swiper-infos">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-navigation">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="bsce" class="projet motion">
+      <div class="carousel">
+        <!--<video src="/visuels/motions/BSCE_Spot.webm" controls>
+
+        </video>-->
+        <iframe src="https://player.vimeo.com/video/688473979" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="description-projet">
+        <div class="sticky">
+          <div class="nom-projet">
+            <p>Kevin Durant on BSCE</p>
+            <br>
+            <hr>
+          </div>
+          <div class="data-projet">
+            <p>Service</p>
+            <div>
+              <p class="motion">Motion Design</p>
+            </div>
+            <p>Date</p>
+            <p>2021</p>
+            <p>Durée</p>
+            <p>11s</p>
+            <br>
+          </div>
+          <div class="infos-projet">
+            <hr>
+            <p>Infos</p>
+            <p>Animation promotionnelle pour une émission de basketball sur une chaine fictive. La bande son extraite d’un solo de batterie jazz rythme l’ensemble de l’animation, et rappelle le côté rythmique de ce sport.<br>Cette animation était également l’occasion d’expérimenter des jeux typographiques, de collage photographiques et de 3D.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="padding-bottom"></div>
+  </div>
+</body>
+</html>
