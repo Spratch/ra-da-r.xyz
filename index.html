@@ -1,57 +1,67 @@
 <!DOCTYPE html>
 
-<html lang="fr" >
-<head>
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
- <meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
- <meta name="robots" content="index,follow">
- <title>Radar</title>
- <meta name="description" content="Radar, Design Graphique">
- <meta name="theme-color" content="#F6F6F6" />
- <link rel="icon" type="image/x-icon" href="favicon.ico" />
- <meta name="Keywords" content="joseph clenet alex pagnoux graphic designer graphiste design rennes bretagne direction artistique motion design editorial identite visuelle web webdesign">
- <meta name="Author" content="Radar">
- <meta name="Copyright" content="Radar">
- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
- <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
- <script type="text/javascript" src="script.js"></script>
- <script type="module">
+<html lang="fr">
 
-  const largeSlider = ()=>{
-  	let largeSliders = document.querySelectorAll('.large-swiper')
-  	let prevArrow = document.querySelectorAll('.swiper-button-prev')
-  	let nextArrow = document.querySelectorAll('.swiper-button-next')
-    let pagination = document.querySelectorAll('.swiper-pagination')
-  	largeSliders.forEach((slider, index)=>{
-      // this bit checks if there's more than 1 slide, if there's only 1 it won't loop
-  		let sliderLength = slider.children[0].children.length
-  		let result = (sliderLength > 1) ? true : false
-  		const swiper = new Swiper(slider, {
-  			direction: 'horizontal',
-  			loop: result,
-        grabCursor: true,
-  			navigation: {
-          // the 'index' bit below is just the order of the class in the queryselectorAll array, so the first one would be NextArrow[0] etc
-  				nextEl: nextArrow[index],
-  				prevEl: prevArrow[index],
-  			},
-        pagination: {
-           el: pagination[index],
-           type: "fraction",
-        },
-  		});
-  	})
-  }
-  window.addEventListener('load', largeSlider)
-</script>
-<script type='text/javascript'>
-$(function(){
-$('#projets').filter();
-});
-</script>
-<link rel="stylesheet" href="style.css" />
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+  <meta name="robots" content="index,follow">
+  <title>Radar – Direction artistique</title>
+  <meta name="description" content="Studio de direction artistique spécialisé en brand design, motion design, editorial design et web design">
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="http://ra-da-r.xyz">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/visuels/nous.webm">
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="ra-da-r.xyz">
+  <meta property="twitter:url" content="http://ra-da-r.xyz">
+  <meta name="twitter:image" content="/visuels/nous.webm">
+        
+  <meta name="theme-color" content="#F6F6F6" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <meta name="Author" content="Radar">
+  <meta name="Copyright" content="Radar">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="module">
+    const largeSlider = () => {
+      let largeSliders = document.querySelectorAll('.large-swiper')
+      let prevArrow = document.querySelectorAll('.swiper-button-prev')
+      let nextArrow = document.querySelectorAll('.swiper-button-next')
+      let pagination = document.querySelectorAll('.swiper-pagination')
+      largeSliders.forEach((slider, index) => {
+        // this bit checks if there's more than 1 slide, if there's only 1 it won't loop
+        let sliderLength = slider.children[0].children.length
+        let result = (sliderLength > 1) ? true : false
+        const swiper = new Swiper(slider, {
+          direction: 'horizontal',
+          loop: result,
+          grabCursor: true,
+          navigation: {
+            // the 'index' bit below is just the order of the class in the queryselectorAll array, so the first one would be NextArrow[0] etc
+            nextEl: nextArrow[index],
+            prevEl: prevArrow[index],
+          },
+          pagination: {
+            el: pagination[index],
+            type: "fraction",
+          },
+        });
+      })
+    }
+    window.addEventListener('load', largeSlider)
+  </script>
+  <script type='text/javascript'>
+    $(function () {
+      $('#projets').filter();
+    });
+  </script>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div id="header" class="action">
     <div id="nom">
@@ -59,24 +69,29 @@ $('#projets').filter();
       <p><a href="#projets">Radar</a></p>
       <div class="reaction">
         <hr>
-        <p>Atelier</p><hr>
-        <p>&emsp;&emsp;&ensp;Direction</p><hr>
-        <p>&emsp;&emsp;&ensp;Artistique</p><hr>
-        <p>&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;Rennes</p></div>
+        <p>Atelier</p>
+        <hr>
+        <p>&emsp;&emsp;&ensp;Direction</p>
+        <hr>
+        <p>&emsp;&emsp;&ensp;Artistique</p>
+        <hr>
+        <p>&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;Rennes</p>
+      </div>
     </div>
     <div id="description">
       <hr>
       <p>À propos</p>
-      <p class="reaction">Nous concevons et produisons des solutions graphiques à vos besoins de communication.<br>Contactez nous pour un portfolio complet.</p>
+      <p class="reaction">Nous concevons et produisons des solutions graphiques à vos besoins de
+        communication.<br>Contactez nous pour un portfolio complet.</p>
     </div>
     <div id="services">
       <hr>
       <p>Services</p>
       <p class="reaction">
-      <span class="brand filter active" data-filter="brand">Identité&nbsp;visuelle</span>
-      <span class="motion filter" data-filter="motion">Motion&nbsp;design</span><br>
-      <span class="editorial filter" data-filter="editorial">Design&nbsp;éditorial</span>
-      <span class="web filter">Design&nbsp;d'interfaces</span>
+        <span class="brand filter active" data-filter="brand">Identité&nbsp;visuelle</span>
+        <span class="motion filter" data-filter="motion">Motion&nbsp;design</span><br>
+        <span class="editorial filter" data-filter="editorial">Design&nbsp;éditorial</span>
+        <span class="web filter">Design&nbsp;d'interfaces</span>
       </p>
     </div>
     <div id="index">
@@ -85,14 +100,27 @@ $('#projets').filter();
       <div class="reaction index">
         <hr>
         <!--<p class="web" onclick="location.href='#ag-org'" style="cursor:pointer"><a href="#ag-org">anothergraphic.org</a></p><hr>-->
-        <p class="editorial" onclick="location.href='#gand-life'" style="cursor:pointer"><a href="#gand-life">Gand Life</a></p><hr>
-        <p class="brand" onclick="location.href='#ora'" style="cursor:pointer"><a href="#ora">Ora</a></p><hr>
-        <p class="motion" onclick="location.href='#take-care'" style="cursor:pointer"><a href="#take-care">Take Care of our Home</a></p><hr>
-        <p class="editorial" onclick="location.href='#panser-plainte'" style="cursor:pointer"><a href="#panser-plainte">Panser la plainte</a></p><hr>
-        <p class="editorial" onclick="location.href='#128-notifs'" style="cursor:pointer"><a href="#128-notifs">128 notifications plus tard</a></p><hr>
-        <p class="type" onclick="location.href='#typos'" style="cursor:pointer"><a href="#typos">Typographies</a></p><hr>
-        <p class="editorial" onclick="location.href='#panser-plainte'" style="cursor:pointer"><a href="#panser-plainte">Panser la plainte</a></p><hr>
-        <p class="motion" onclick="location.href='#bsce'" style="cursor:pointer"><a href="#bsce">Kevin Durant on BSCE</a></p>
+        <p class="editorial" onclick="location.href='#gand-life'" style="cursor:pointer"><a href="#gand-life">Gand
+            Life</a></p>
+        <hr>
+        <p class="brand" onclick="location.href='#ora'" style="cursor:pointer"><a href="#ora">Ora</a></p>
+        <hr>
+        <p class="motion" onclick="location.href='#take-care'" style="cursor:pointer"><a href="#take-care">Take Care of
+            our Home</a></p>
+        <hr>
+        <p class="editorial" onclick="location.href='#panser-plainte'" style="cursor:pointer"><a
+            href="#panser-plainte">Panser la plainte</a></p>
+        <hr>
+        <p class="editorial" onclick="location.href='#128-notifs'" style="cursor:pointer"><a href="#128-notifs">128
+            notifications plus tard</a></p>
+        <hr>
+        <p class="type" onclick="location.href='#typos'" style="cursor:pointer"><a href="#typos">Typographies</a></p>
+        <hr>
+        <p class="editorial" onclick="location.href='#panser-plainte'" style="cursor:pointer"><a
+            href="#panser-plainte">Panser la plainte</a></p>
+        <hr>
+        <p class="motion" onclick="location.href='#bsce'" style="cursor:pointer"><a href="#bsce">Kevin Durant on
+            BSCE</a></p>
       </div>
     </div>
     <div id="contact">
@@ -100,14 +128,29 @@ $('#projets').filter();
       <p>Contact</p>
       <div class="reaction contact">
         <hr>
-        <a href="https://www.instagram.com/radar.xyz/"><p>Instagram</p><p>radar.xyz</p></a><hr>
-        <a href="mailto:hello@ra-da-r.xyz"><p>Mail</p><p>hello@ra-da-r.xyz</p></a><hr>
-        <a href="tel:+33789940718"><p>Joseph Clenet</p><p>07 89 94 07 18</p></a><hr>
-        <a href="tel:+33633836302"><p>Alex Pagnoux</p><p>06 33 83 63 02</p></a>
+        <a href="https://www.instagram.com/radar.xyz/">
+          <p>Instagram</p>
+          <p>radar.xyz</p>
+        </a>
+        <hr>
+        <a href="mailto:hello@ra-da-r.xyz">
+          <p>Mail</p>
+          <p>hello@ra-da-r.xyz</p>
+        </a>
+        <hr>
+        <a href="tel:+33789940718">
+          <p>Joseph Clenet</p>
+          <p>07 89 94 07 18</p>
+        </a>
+        <hr>
+        <a href="tel:+33633836302">
+          <p>Alex Pagnoux</p>
+          <p>06 33 83 63 02</p>
+        </a>
       </div>
     </div>
   </div>
-<!--  <div id="intro">
+  <!--  <div id="intro">
       <div class="video">
         <video controls width="auto" autoplay mute>
           <source src="/visuels/nous.webm"
@@ -198,7 +241,11 @@ $('#projets').filter();
           <div class="infos-projet">
             <hr>
             <p>Infos</p>
-            <p>Suite à notre collaboration avec Studio Studio, nous avons souhaité produire un ouvrage relatant notre expérience. Nous traitons en texte de deux aspects de ce stage : l’attitude des marques sur les réseaux sociaux, et les manières de faire de la curation graphique aujourd’hui.<br>Puis nous revenons en annexe sur la charte graphique d’Another Graphic, des archives photographiques, ainsi qu’un recueil de conversations portant sur la&nbsp;curation&nbsp;graphique.</p>
+            <p>Suite à notre collaboration avec Studio Studio, nous avons souhaité produire un ouvrage relatant notre
+              expérience. Nous traitons en texte de deux aspects de ce stage : l’attitude des marques sur les réseaux
+              sociaux, et les manières de faire de la curation graphique aujourd’hui.<br>Puis nous revenons en annexe
+              sur la charte graphique d’Another Graphic, des archives photographiques, ainsi qu’un recueil de
+              conversations portant sur la&nbsp;curation&nbsp;graphique.</p>
           </div>
         </div>
         <div class="swiper-infos">
@@ -241,7 +288,9 @@ $('#projets').filter();
           <div class="infos-projet">
             <hr>
             <p>Infos</p>
-            <p>Identité visuelle et site internet pour le collectif ORA. Ce collectif travaille autour du paysage et de l'ambiance à travers plusieurs mediums : field recording, composition musicale, remix, mix, djing, animation vidéo, motion design, peinture, creative coding, vjing…</p>
+            <p>Identité visuelle et site internet pour le collectif ORA. Ce collectif travaille autour du paysage et de
+              l'ambiance à travers plusieurs mediums : field recording, composition musicale, remix, mix, djing,
+              animation vidéo, motion design, peinture, creative coding, vjing…</p>
           </div>
         </div>
         <div class="swiper-infos">
@@ -259,7 +308,8 @@ $('#projets').filter();
         <!--<video src="/visuels/motions/MIXAGE_1.webm" controls>
 
         </video>-->
-        <iframe src="https://player.vimeo.com/video/688469131" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/688469131" frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="description-projet">
         <div class="sticky">
@@ -282,7 +332,8 @@ $('#projets').filter();
           <div class="infos-projet">
             <hr>
             <p>Infos</p>
-            <p>C’est à l’occasion de la journée mondiale de l’environnement 2021 que cette courte vidéo a été diffusé sur les réseaux sociaux, illustrant un appel aux dons à des ONG de sauvegarde de l’environnement.</p>
+            <p>C’est à l’occasion de la journée mondiale de l’environnement 2021 que cette courte vidéo a été diffusé
+              sur les réseaux sociaux, illustrant un appel aux dons à des ONG de sauvegarde de l’environnement.</p>
           </div>
         </div>
       </div>
@@ -319,7 +370,12 @@ $('#projets').filter();
           <div class="infos-projet">
             <hr>
             <p>Infos</p>
-            <p>Mémoire de recherche professionnel portant sur l’incidence des interfaces numérique sur le bien-être au travail dans le secteur tertiaire. L’ouvrage fait état d’une recherche sur les manières par lesquelles le design graphique peut diminuer les distractions numériques dans l’espace de travail et comment créer des interfaces utiles sans perturber l’usager.<br>Le format de la publication ainsi que la mise en page du texte font écho aux dimensions verticales des smartphones. Des pictogrammes dessinés sur mesure et inspirés des emojis viennent illustrer et segmenter la réflexion chapitre&nbsp;par&nbsp;chapitre.</p>
+            <p>Mémoire de recherche professionnel portant sur l’incidence des interfaces numérique sur le bien-être au
+              travail dans le secteur tertiaire. L’ouvrage fait état d’une recherche sur les manières par lesquelles le
+              design graphique peut diminuer les distractions numériques dans l’espace de travail et comment créer des
+              interfaces utiles sans perturber l’usager.<br>Le format de la publication ainsi que la mise en page du
+              texte font écho aux dimensions verticales des smartphones. Des pictogrammes dessinés sur mesure et
+              inspirés des emojis viennent illustrer et segmenter la réflexion chapitre&nbsp;par&nbsp;chapitre.</p>
           </div>
         </div>
         <div class="swiper-infos">
@@ -361,7 +417,8 @@ $('#projets').filter();
           <div class="infos-projet">
             <hr>
             <p>Infos</p>
-            <p>Passionnés par la typographie, nous avons plusieurs fois designé des fontes sur mesure ou des lettrages pour des projets de design éditorial, d’identité visuelle ou artistiques.</p>
+            <p>Passionnés par la typographie, nous avons plusieurs fois designé des fontes sur mesure ou des lettrages
+              pour des projets de design éditorial, d’identité visuelle ou artistiques.</p>
           </div>
         </div>
         <div class="swiper-infos">
@@ -407,7 +464,12 @@ $('#projets').filter();
           <div class="infos-projet">
             <hr>
             <p>Infos</p>
-            <p>Mémoire de recherche professionnel portant sur le rôle que peut avoir le design lors d’un dépôt de plainte pour violence sexuelle.<br>Il fait état de la situation actuelle concernant l’accueil des victimes et questionne l’intervention potentielle du design en amont de la plainte, et au moment même de la plainte.<br>Les choix graphiques de l’ouvrage facilitent la lecture d’une réflexion sourcée en mettant en valeur annotations et notes de bas de page et en illustrant des chiffres clés. La mise en page emprunte certains codes visuels de&nbsp;l’administration&nbsp;policière.</p>
+            <p>Mémoire de recherche professionnel portant sur le rôle que peut avoir le design lors d’un dépôt de
+              plainte pour violence sexuelle.<br>Il fait état de la situation actuelle concernant l’accueil des victimes
+              et questionne l’intervention potentielle du design en amont de la plainte, et au moment même de la
+              plainte.<br>Les choix graphiques de l’ouvrage facilitent la lecture d’une réflexion sourcée en mettant en
+              valeur annotations et notes de bas de page et en illustrant des chiffres clés. La mise en page emprunte
+              certains codes visuels de&nbsp;l’administration&nbsp;policière.</p>
           </div>
         </div>
         <div class="swiper-infos">
@@ -425,7 +487,8 @@ $('#projets').filter();
         <!--<video src="/visuels/motions/BSCE_Spot.webm" controls>
 
         </video>-->
-        <iframe src="https://player.vimeo.com/video/688473979" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/688473979" frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="description-projet">
         <div class="sticky">
@@ -448,7 +511,10 @@ $('#projets').filter();
           <div class="infos-projet">
             <hr>
             <p>Infos</p>
-            <p>Animation promotionnelle pour une émission de basketball sur une chaine fictive. La bande son extraite d’un solo de batterie jazz rythme l’ensemble de l’animation, et rappelle le côté rythmique de ce sport.<br>Cette animation était également l’occasion d’expérimenter des jeux typographiques, de collage photographiques et de 3D.</p>
+            <p>Animation promotionnelle pour une émission de basketball sur une chaine fictive. La bande son extraite
+              d’un solo de batterie jazz rythme l’ensemble de l’animation, et rappelle le côté rythmique de ce
+              sport.<br>Cette animation était également l’occasion d’expérimenter des jeux typographiques, de collage
+              photographiques et de 3D.</p>
           </div>
         </div>
       </div>
@@ -457,4 +523,5 @@ $('#projets').filter();
     <div id="padding-bottom"></div>
   </div>
 </body>
+
 </html>
