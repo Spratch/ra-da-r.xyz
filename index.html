@@ -45,6 +45,11 @@
   }
   window.addEventListener('load', largeSlider)
 </script>
+<script type='text/javascript'>
+$(function(){
+$('#projets').filter();
+});
+</script>
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -62,7 +67,7 @@
     <div id="description">
       <hr>
       <p>À propos</p>
-      <p class="reaction">Nous concevons et produisons des solutions graphiques à vos besoins de communication.</p>
+      <p class="reaction">Nous concevons et produisons des solutions graphiques à vos besoins de communication.<br>Contactez nous pour un portfolio complet.</p>
     </div>
     <div id="services">
       <hr>
@@ -71,7 +76,7 @@
       <span class="brand filter active" data-filter="brand">Identité&nbsp;visuelle</span>
       <span class="motion filter" data-filter="motion">Motion&nbsp;design</span><br>
       <span class="editorial filter" data-filter="editorial">Design&nbsp;éditorial</span>
-      <span class="web filter" data-filter="all">Design&nbsp;d'interfaces</span>
+      <span class="web filter">Design&nbsp;d'interfaces</span>
       </p>
     </div>
     <div id="index">
@@ -159,7 +164,7 @@
     </div>
     <hr>-->
 
-    <div id="gand-life" class="projet large-slider-container editorial">
+    <div id="gand-life" class="projet large-slider-container" data-filter-tags="editorial">
       <div class="carousel swiper large-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="/visuels/gand-life/gl_1.png" alt=""></div>
@@ -206,7 +211,7 @@
       </div>
     </div>
 
-    <div id="ora" class="projet large-slider-container brand">
+    <div id="ora" class="projet large-slider-container" data-filter-tags="brand">
       <div class="carousel swiper large-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="/visuels/Ora/ORA_1.png" alt=""></div>
@@ -249,7 +254,7 @@
       </div>
     </div>
 
-    <div id="take-care" class="projet motion">
+    <div id="take-care" class="projet" data-filter-tags="motion">
       <div class="carousel">
         <!--<video src="/visuels/motions/MIXAGE_1.webm" controls>
 
@@ -283,7 +288,7 @@
       </div>
     </div>
 
-    <div id="128-notifs" class="projet large-slider-container editorial">
+    <div id="128-notifs" class="projet large-slider-container" data-filter-tags="editorial">
       <div class="carousel swiper large-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="/visuels/128notifs/128_1.png" alt=""></div>
@@ -327,7 +332,7 @@
       </div>
     </div>
 
-    <div id="typos" class="projet large-slider-container type">
+    <div id="typos" class="projet large-slider-container" data-filter-tags="type">
       <div class="carousel swiper large-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="/visuels/typos/typos_1.png" alt=""></div>
@@ -369,7 +374,7 @@
       </div>
     </div>
 
-    <div id="panser-plainte" class="projet large-slider-container editorial">
+    <div id="panser-plainte" class="projet large-slider-container" data-filter-tags="editorial">
       <div class="carousel swiper large-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="/visuels/plainte/pl_1.png" alt=""></div>
@@ -415,7 +420,7 @@
       </div>
     </div>
 
-    <div id="bsce" class="projet motion">
+    <div id="bsce" class="projet" data-filter-tags="motion">
       <div class="carousel">
         <!--<video src="/visuels/motions/BSCE_Spot.webm" controls>
 
