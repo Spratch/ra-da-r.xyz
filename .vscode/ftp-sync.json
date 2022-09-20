@@ -1,0 +1,27 @@
+{
+    "remotePath": "./",
+    "host": "ftp.cluster031.hosting.ovh.net",
+    "username": "radarxy",
+    "password": "EZ45Vj2Nd6UJ",
+    "port": 21,
+    "secure": false,
+    "protocol": "ftp",
+    "uploadOnSave": true,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "agent": null,
+    "allow": [],
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store"
+    ],
+    "generatedFiles": {
+        "extensionsToInclude": [
+            ""
+        ],
+        "path": ""
+    }
+}
