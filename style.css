@@ -230,7 +230,7 @@ span.filter{
   padding: 1px 6px;
   line-height: 1.7;
   transition: all .2s cubic-bezier(0.4, 0, 1, 1);
-  cursor: pointer;
+  /*cursor: pointer;
 }
 span.filter.selected{
   background-color: transparent;
@@ -248,7 +248,7 @@ span.motion.selected{
 }
 span.editorial.selected{
     box-shadow: 0px 0px 13px 6px #FFE54B;
-}
+}*/}
 
 span.brand, #index .brand:hover{
   background-color: #EABEFF;
@@ -276,7 +276,7 @@ span.editorial{
 }
 span.web{
   border: 1px solid #FFA289;
-  cursor: not-allowed;
+  /*cursor: not-allowed;*/
 }
 span.type{
   border: 1px solid #84CDF0;
