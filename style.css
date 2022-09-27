@@ -194,10 +194,10 @@ img{
     color: var(--swiper-navigation-color,var(--swiper-theme-color));
 }
 .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
-    content: 'â†';
+    content: '←';
 }
 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
-    content: 'â†’';
+    content: '→';
 }
 .swiper-button-next:after, .swiper-button-prev:after {
     font-family: 'suisse_intlregular';
