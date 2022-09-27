@@ -24,7 +24,6 @@ body {
   height: 100%;
   width: 100%;
   font-feature-settings: 'pnum' on, 'onum' on;
-
 }
 p{
   margin:0;
@@ -226,18 +225,18 @@ img{
 }
 
 /*Services*/
-span.brand, span.motion, span.editorial, span.web, span.type{
+span.filter{
   border-radius: 30px;
   padding: 1px 6px;
   line-height: 1.7;
   transition: all .2s cubic-bezier(0.4, 0, 1, 1);
   cursor: pointer;
 }
-span.brand.selected, span.motion.selected, span.editorial.selected, span.web.selected{
+span.filter.selected{
   background-color: transparent;
   border: 1px solid black;
 }
-span.brand:hover, span.motion:hover, span.editorial:hover, span.web:hover, span.type:hover{
+span.filter:hover{
   background-color: #e4e4e4;
   border: 1px solid black;
 }
@@ -282,7 +281,8 @@ span.web{
 span.type{
   border: 1px solid #84CDF0;
 }
-.data-projet .brand::before, .data-projet .motion::before, .data-projet .editorial::before, .data-projet .web::before, .data-projet .type::before{
+
+.data-projet .service::before{
   content: '';
   border-radius: 50%;
   height: 10px;
