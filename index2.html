@@ -37,6 +37,11 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <script type="module">const loader = document.querySelector('.loader');
+
+      window.addEventListener('load', () => {
+        loader.classList.add('oiut');
+      })</script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
@@ -82,6 +87,20 @@
   </head>
 
   <body>
+    <div id="loader-wrapper" class="loader">
+      <div id="loader">
+        <div id="circle">
+        </div>
+        <div id="gauche" class="line">
+        </div>
+        <div id="haut" class="line">
+        </div>
+        <div id="bas" class="line">
+        </div>
+        <div id="droite" class="line">
+        </div>
+      </div>
+    </div>
     <div id="header" class="action">
       <div id="nom">
         <hr>
