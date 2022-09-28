@@ -34,7 +34,7 @@
   }
 }
 #loader-wrapper{
-  background-color: rgba(0,0,0,.9);
+  background-color: rgba(0,0,0,1);
   backdrop-filter: blur(5px);
   width: 100%;
   height: 100%;
@@ -69,13 +69,13 @@
   position: absolute;
 }
 #haut, #bas{
-  writing-mode: vertical-rl;
+  transform: rotate(90deg);
 }
 #haut{
-  top: calc(var(--h) - var(--d));
+  top: calc(var(--h) - var(--l) + calc(var(--e) / 2));
 }
 #bas{
-  bottom: calc(var(--h) - var(--d));
+  bottom: calc(var(--h) - var(--l) + calc(var(--e) / 2));
 }
 #gauche{
   left: calc(var(--w) - var(--d));
