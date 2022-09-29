@@ -9,7 +9,8 @@
   font-style: normal;
 }
 
-/*Loader*/
+/*LOADER*/
+/*Variables*/
 :root{
   --e: 10px;
   --l: 40px;
@@ -18,6 +19,7 @@
   --w: 50vw;
 }
 
+/*Animations*/
 @keyframes r{
   50%{
     transform: rotate(180deg);
@@ -27,12 +29,7 @@
   }
 }
 
-@keyframes out{
-  100%{
-    opacity: 0;
-    display: none;
-  }
-}
+/* bg */
 #loader-wrapper{
   background-color: rgba(0,0,0,1);
   backdrop-filter: blur(5px);
@@ -44,7 +41,7 @@
   z-index: 30;
   pointer-events: none;
 }
-
+/* loader */
 #loader{
   position: absolute;
   width: 100%;
@@ -83,22 +80,40 @@
 #droite{
   right: calc(var(--w) - var(--d));
 }
+/* Disparition */
 #loader-wrapper.out{
   opacity: 0;
   transition: opacity 0.4s ease-out;
 }
 
-/*General*/
+
+/* COULEURS */
+/* Variables */
+:root{
+  --bg: white;
+  --fg: black;
+  --bg2: #f6f6f6;
+}
+/* Nuit */
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg: black;
+    --fg: white;
+    --bg2: #0a0a0a;
+  }
+}
+
+/*GENERAL*/
 body, html {
   margin: 0px;
   padding: 0px;
   scroll-behavior: smooth;
 }
 body {
-  background-color: white;
+  background-color: var(--bg);
   font-family: 'suisse_intlregular';
   font-size: 13px;
-  color: black;
+  color: var(--fg);
   line-height: 1.2;
   height: 100%;
   width: 100%;
@@ -114,7 +129,7 @@ hr{
 }
 a{
   text-decoration: none;
-  color: black;
+  color: var(--fg);
 }
 ::selection {
     color: #e4e4e4;
@@ -136,7 +151,7 @@ iframe #player {
 
 /*Header*/
 #header{
-  background-color: #F6F6F6;
+  background-color: var(--bg2);
   padding: 12px;
   display: grid;
   grid-template-columns: repeat(5,1fr);
@@ -147,7 +162,7 @@ iframe #player {
   width: calc(100% - 24px);
   height: 21px;
   transition: height 2s ease;
-  border-bottom: 0.5px solid black;
+  border-bottom: 0.5px solid var(--fg);
 }
 .reaction{
   display: none;
@@ -190,7 +205,7 @@ iframe #player {
   height: 12px;
   width: calc(100% - 24px);
   z-index: 2;
-  background-color: white;
+  background-color: var(--bg);
 }
 #padding-top{
   top: 45px;
@@ -199,7 +214,7 @@ iframe #player {
   bottom: 0;
 }
 
-/*Projets*/
+/*PROJETS*/
 #projets{
   padding: 0 12px;
   top: 45px;
@@ -211,7 +226,7 @@ iframe #player {
   grid-template-columns: repeat(5,1fr);
   grid-column-gap: 12px;
   height: 90vh;
-  border-bottom: 0.5px solid black;
+  border-bottom: 0.5px solid var(--fg);
 }
 /*Carousel*/
 .carousel{
@@ -327,7 +342,7 @@ span.motion.selected{
 }
 span.editorial.selected{
     box-shadow: 0px 0px 13px 6px #FFE54B;
-}*/}
+*/}
 
 span.brand, #index .brand:hover{
   background-color: #EABEFF;
@@ -386,10 +401,10 @@ span.type{
   background: #84CDF0;
 }
 
-/*Mobile*/
+/*MOBILE*/
 @media only screen and (max-width: 600px) {
   html{
-    background-color: white;
+    background-color: var(--bg);
   }
   /*Header*/
   #header{
