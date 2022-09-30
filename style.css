@@ -187,7 +187,7 @@ iframe #player {
   z-index: 3;
   width: calc(100% - 24px);
   max-height: 21px;
-  transition: max-height .3s ease-in-out;
+  transition: max-height .3s ease-in-out .1s;
   border-bottom: 0.5px solid var(--fg);
 }
 .reaction{
@@ -201,6 +201,7 @@ iframe #player {
 }
 #header:hover{
   max-height: 100px;
+  transition: max-height .2s ease-in-out 0s;
 }
 #nom .reaction hr{
   display: none;
