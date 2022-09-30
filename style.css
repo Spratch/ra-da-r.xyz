@@ -187,12 +187,13 @@ iframe #player {
   z-index: 3;
   width: calc(100% - 24px);
   max-height: 21px;
-  transition: max-height .3s ease;
+  transition: max-height .3s ease-in-out;
   border-bottom: 0.5px solid var(--fg);
 }
 .reaction{
   visibility: hidden;
   opacity: 0;
+  transition: all .3s ease-in-out;
 }
 .action:hover .reaction{
   visibility: visible;
