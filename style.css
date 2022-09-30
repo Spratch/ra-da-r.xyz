@@ -186,18 +186,20 @@ iframe #player {
   top: 0;
   z-index: 3;
   width: calc(100% - 24px);
-  height: 21px;
-  transition: height 2s ease;
+  max-height: 21px;
+  transition: max-height .3s ease;
   border-bottom: 0.5px solid var(--fg);
 }
 .reaction{
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 .action:hover .reaction{
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 #header:hover{
-  height: auto;
+  max-height: 100px;
 }
 #nom .reaction hr{
   display: none;
@@ -349,10 +351,10 @@ span.filter{
   border-radius: 30px;
   padding: 1px 6px;
   line-height: 1.7;
-  transition: all .2s cubic-bezier(0.4, 0, 1, 1);
   background-color: var(--col);
   border: 1px solid var(--col);
   /*cursor: pointer;
+  transition: all .2s cubic-bezier(0.4, 0, 1, 1);
 }
 span.filter.selected{
   background-color: transparent;
