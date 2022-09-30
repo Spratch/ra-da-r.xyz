@@ -101,6 +101,9 @@
     --fg: white;
     --bg2: #0a0a0a;
   }
+  #services span.filter{
+    background-color: var(--bg);
+  }
 }
 
 /*GENERAL*/
