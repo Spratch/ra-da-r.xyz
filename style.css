@@ -45,8 +45,8 @@
   #contact .reaction.contact a:hover{
     background-color: #444444;
   }
-  .index>p:hover{
-    background-color: transparent;
+  #index .reaction p:hover a{
+    color: var(--bg);
   }/**/
 }
 
