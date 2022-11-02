@@ -47,7 +47,7 @@
   }
   #index .reaction p:hover a{
     color: var(--bg);
-  }/**/
+  }
 }
 
 
@@ -145,6 +145,11 @@ body {
   width: 100%;
   font-feature-settings: 'pnum' on, 'onum' on;
 }
+h1, h2 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
 p{
   margin:0;
 }
@@ -161,7 +166,7 @@ a{
     color: #e4e4e4;
     background-color: transparent;
 }
-iframe{
+iframe, video{
   width: 100%;
   height: 100%;
 }
