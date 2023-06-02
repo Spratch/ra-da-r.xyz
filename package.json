@@ -1,0 +1,15 @@
+{
+  "name": "ra-da-r.xyz",
+  "version": "1.0.0",
+  "description": "[Ra-da-r.xyz](https://ra-da-r.xyz) is the website for Radar, the joint work of [Alex Pagnoux](https://alexpagnoux.com) and [Joseph Clenet](https://josephclenet.fr) in graphic design and web development.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.58.3"
+  }
+}
